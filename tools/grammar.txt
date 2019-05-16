@@ -1,0 +1,13 @@
+input -> stmlist Semicolon
+stmlist -> expr stmlistprime
+stmlistprime -> Semicolon expr stmlistprime
+expr -> term exprprime
+exprprime -> OpAdd term exprprimerime
+exprprime -> OpSub term exprprime
+exprprime -> OpMul term exprprime
+exprprime -> OpDiv term exprprime
+term -> factor termprime
+termprime -> OpMul factor termprime
+factor -> Number
+factor -> Ident
+factor -> OpenPar expr ClosePar
